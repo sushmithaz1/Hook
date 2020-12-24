@@ -1,0 +1,24 @@
+import React from 'react';
+//component must be in upper case
+//must be in function body
+//cannot call conditionally
+//use
+
+const ErrorExample = () => {
+  let title = 'random title';
+
+  const handleClick = () => {
+    title = 'hello people';
+    console.log(title);
+  };
+  return (
+    <React.Fragment>
+      <h2>{title}</h2>
+      <button type='button' className='btn' onClick={handleClick}>
+        change title
+      </button>
+    </React.Fragment>
+  );
+};
+
+export default ErrorExample;
