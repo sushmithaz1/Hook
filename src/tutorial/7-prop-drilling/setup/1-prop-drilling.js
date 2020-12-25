@@ -1,46 +1,50 @@
 import React, { useState } from 'react';
-import { data } from '../../../data';
+import {data} from '../../../data';
+
 // more components
 // fix - context api, redux (for more complex cases)
 
 const PropDrilling = () => {
-  const [people, setPeople] = useState(data);
-  const removePerson = (id) => {
-    setPeople((people) => {
-      return people.filter((person) => person.id !== id);
+  const[people,setPerson]=useState(data);
+  const removeName=(id)=>{
+    setPerson((person)=>{
+    return person.filter((data)=>data.id!==id)
     });
   };
-  return (
-    <section>
-      <h3>prop drilling</h3>
-      <List people={people} removePerson={removePerson} />
-    </section>
-  );
-};
-
-const List = ({ people, removePerson }) => {
-  return (
+  return(
     <>
-      {people.map((person) => {
-        return (
-          <SinglePerson
-            key={person.id}
-            {...person}
-            removePerson={removePerson}
-          />
-        );
-      })}
-    </>
+  <List people={people} removeName={removeName}/>
+  </>
   );
-};
 
-const SinglePerson = ({ id, name, removePerson }) => {
-  return (
-    <div className='item'>
-      <h4>{name}</h4>
-      <button onClick={() => removePerson(id)}>remove</button>
-    </div>
+}
+
+
+const List=({people,removeName})=>{
+  return(
+    <>
+  {people.map((person)=>{
+    return(
+    <SinglePerson 
+    key={person.id}
+    {...person}
+    removeName={removeName}/>
+    );
+  })}
+  </>
   );
+  
 };
+const SinglePerson=({id,name,removeName})=>{
+ return(
+   <div className='item'>
+  <h2>{name}</h2>
+  
+  <button onClick={() => removeName(id)} >remove</button>
+  </div>
+  );
+
+
+}
 
 export default PropDrilling;

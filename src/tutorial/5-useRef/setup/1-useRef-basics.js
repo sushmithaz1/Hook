@@ -9,7 +9,9 @@ const UseRefBasics = () => {
 
   const submitChanges=(e)=>{
     e.preventDefault();
-    console.log(reference.current.value);
+    return(
+      reference.current.value
+    ) ;
   }
   useEffect(() => {
     console.log(reference.current);

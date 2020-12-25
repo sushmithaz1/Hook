@@ -1,5 +1,5 @@
 import React from 'react'
-import SetUp from './tutorial/8-useContext/setup/1-context-api'
+import SetUp from './tutorial/11-react-router/setup/index'
 
 function App() {
   return(

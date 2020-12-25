@@ -3,7 +3,7 @@ import { data } from '../../../data';
 // more components
 // fix - context api, redux (for more complex cases)
 
-const PersonContext = React.createContext();
+const PersonContext=React.createContext();
 
 const ContextAPI = () => {
   const [people, setPeople] = useState(data);
@@ -19,7 +19,6 @@ const ContextAPI = () => {
     </PersonContext.Provider>
   );
 };
-
 const List = () => {
   const mainData = useContext(PersonContext);
   console.log(mainData);
@@ -32,6 +31,7 @@ const List = () => {
   );
 };
 
+
 const SinglePerson = ({ id, name }) => {
   const { removePerson } = useContext(PersonContext);
 
@@ -42,5 +42,6 @@ const SinglePerson = ({ id, name }) => {
     </div>
   );
 };
+
 
 export default ContextAPI;
