@@ -1,10 +1,10 @@
 import React from 'react'
-import SetUp from './tutorial/12-memo-useMemo-useCallback/setup/index'
+import Async from './AsyncExample/async'
 
 function App() {
   return(
     <div className='container'>
-      <SetUp/>
+      <Async/>
     </div>
   );
 }
