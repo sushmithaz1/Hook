@@ -1,10 +1,10 @@
 import React from 'react'
-import Async from './AsyncExample/async'
+import {Generator} from './AsyncExample/Generator'
 
 function App() {
   return(
     <div className='container'>
-      <Async/>
+      <Generator/>
     </div>
   );
 }

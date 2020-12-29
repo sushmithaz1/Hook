@@ -1,23 +1,19 @@
+const PromiseEx=()=>{
 
- const Posts=[
-    'first post',
-    'second post'
-];
-function getPosts(){
-    setTimeout(()=>{
-        let output='';
-   
-        output+=`<li>${Posts}</li>`;
-
-    document.body.innerHTML = (output);
-}, 1000);
+const timeOut = (t) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(`Completed in ${t}`)
+      })
+    })
+  }
+  
+  //normal promise.
+  timeOut(1000)
+   .then(result => console.log(result)) 
+  
+  // Promise.all
+ // Promise.all([timeOut(1000), timeOut(2000)])
+ //  .then(result => console.log(result)) 
 }
-
-function createPost(post,callback){
-    setTimeout(()=>{
-        Posts.push(post);
-        callback();
-    },2000);
-}
-createPost('Third post',getPosts);
-export default Posts;
+export default PromiseEx;
