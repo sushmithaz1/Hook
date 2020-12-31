@@ -12,11 +12,12 @@
 .form{
   width: 90vw;
   margin:auto;
-  bottom: 10px;
+  position: relative;
+  top: 70px;
     text-align: center;
   align-content: center;
   background-color:white;
-  border-radius:15px;
+  border-radius:50px;
   height: 400px;
   width: 400px;
 
@@ -24,9 +25,10 @@
 .Element{
     position: relative;
     font-weight: 500;
-    top: 140px;
+    top: 50px;
     padding: 20px;
     margin:10px;
+    color: black;
 
 }
 .Element input{
@@ -42,7 +44,7 @@
     position: relative;
     padding: 10px;
     margin:10px;
-    top: 150px;
+    top: 50px;
     background-color: black;
     color:white;
     font-weight: 300;
