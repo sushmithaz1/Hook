@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Home from './tabs/tabs'
-import Post from './tabs/Post'
+import Home from './tabs'
+import Post from './Post'
 
-function App() {
+function Apps() {
   return (
     <Router>
       <Switch>
@@ -15,4 +15,4 @@ function App() {
   )
 }
 
-export default App
+export default Apps
